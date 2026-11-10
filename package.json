@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://HuuNguyenTa.github.io/Giao-di-n-h-th-ng-qu-n-l-th-c-ng",
+  "homepage": "https://HuuNguyenTa.github.io/pet-haven",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
