@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { useReducer, useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 
 // 1. Tầng Quản lý Ngữ cảnh (Context Hooks)
@@ -50,7 +50,7 @@ function MainApp() {
   const navigate = useNavigate();
 
   // 1. Hook useReducer quản lý danh sách nhận nuôi
-  const [cart, dispatch] = useReducer(adoptionReducer, initialAdoptionState);
+  const [cart, dispatch] = useReducer(adoptionReducer, initialAdoptionState);  
 
   // 2. Hook useState lưu kết quả đơn đăng ký thành công
   const [completedOrder, setCompletedOrder] = useState(null);
@@ -201,16 +201,16 @@ function MainApp() {
   );
 }
 
-// Bọc toàn bộ ứng dụng bằng BrowserRouter, ThemeProvider và AuthProvider
+// Bọc toàn bộ ứng dụng bằng HashRouter, ThemeProvider và AuthProvider
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider>
         <AuthProvider>
           <MainApp />
         </AuthProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
